@@ -61,7 +61,7 @@ def main_game_loop():
             time.sleep(1)
     except KeyboardInterrupt:
         # Завершення гри при натисканні Ctrl+C
-        print("Гра завершена.")
+        print("Гра завершена.(Debug text from clock.py)")
         
 # Запускаємо головний цикл гри
 main_game_loop()
