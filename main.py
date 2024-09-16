@@ -14,10 +14,11 @@ europe_city_3 = "Берлін"
 player_location = ukraine_city_1
 
 #сюди зберігаються ім'я та призвище при старті гравця
-#перевірка його хіт поінтів
+
 player_name: str = None
 player_last_name: str = None
 
+#перевірка його хіт поінтів
 player_health: int = 100
 
 player_strenght: int = 1
@@ -27,6 +28,10 @@ player_stamina: int = 1
 
 player_surv_food: int = 100
 player_surv_water: int = 100
+###############################
+
+
+
 
 
 
