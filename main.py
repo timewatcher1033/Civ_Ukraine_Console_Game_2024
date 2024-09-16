@@ -15,10 +15,10 @@ player_location = ukraine_city_1
 
 #сюди зберігаються ім'я та призвище при старті гравця
 
-player_name: str = None
-player_last_name: str = None
+player_name = input("Введи ім'я гравця ")
+player_last_name = input("Введи призвіще гравця ")
 
-#перевірка його хіт поінтів
+#статки гравця
 player_health: int = 100
 
 player_strenght: int = 1
@@ -30,12 +30,35 @@ player_surv_food: int = 100
 player_surv_water: int = 100
 ###############################
 
-def main_game_loop(number):
-    if player_health <= 0:
-        print()
+#тест від Gemini
 
+player_surv_food: int = 100
+player_surv_water: int = 100
 
+def check_player_status():
+    if player_surv_food <= 0 or player_surv_water <= 0:
+        print("Гравець помер , ви програли :(")
+    else:
+        print("Ваше прізвище та ім'я: "+ player_name + " " + player_last_name)
+        print("Рівень здоров'я: "+ str(player_health))
+        print("Зневоднення: "+ str(player_surv_water))
+        print("Голод: "+ str(player_surv_food))
+        print("Ви у місті: "+ player_location)
+     
 
+        print("Ваші характеристики:")
+        print("Сила: "+ str(player_strenght))
+        print("Спритність: "+ str(player_agility))
+        print("Інтелект: "+ str(player_intelligence))
+        print("Витривалість: "+ str(player_stamina))
+          
 
+while True:
+    check_player_status()
+    
+    # Оновлення значень змінних ,можна змінити на свої змінні , бо ці чисто для наглядності
+    player_surv_food = int(input("Введіть нове значення харчів: "))
+    player_surv_water = int(input("Введіть нове значення води: "))
 
+                                                    # END #
 
