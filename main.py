@@ -1,49 +1,32 @@
 
-import time
-from clock import display
-from location import player_location
-from player import player_name,player_last_name
-from input import input_name,input_last_name 
 
+#Міста гри
+ukraine_city_1 = "Київ"
+ukraine_city_2 = "Дніпро"
+ukraine_city_3 = "Харків"
+ukraine_city_4 = "Львів"
+ukraine_city_5 = "Кривий Ріг"
+europe_city_1 = "Варшава"
+europe_city_2 = "Лондон"
+europe_city_3 = "Берлін"
 
-gametime = display()
-print(f"{"ігрова дата "[:len(gametime)//2]}\n{"другий рядок ігрового тексту "[len("друга частина другог орядку")//2:]}")
+#Змінна поточного місцеположення гравця
+player_location = ukraine_city_1
 
+#сюди зберігаються ім'я та призвище при старті гравця
+#перевірка його хіт поінтів
+player_name: str = None
+player_last_name: str = None
 
-welcome_message01 = "Вітаємо тебе у грі Цивілізація Олексія Великого 2024" 
-time.sleep(1)
-print(welcome_message01)
+player_health: int = 100
 
-#не дописав до головного циклу інпути, вони якось не правильно працюють.
-input(input_name)
-input(input_last_name)
+player_strenght: int = 1
+player_agility: int = 1
+player_intelligence: int = 1
+player_stamina: int = 1
 
-
-
-
-player_sex = input("Ти хлопець чи дівчина? введи будь ласка тільки Чоловік або Жінка ")
-    #Порівняння якого полу гравець
-if player_sex == "Чоловік":
-        print("значить чоловік...добре ,поїхали далі ")
-elif player_sex == "Жінка":
-        print("значить дівчинка...добре ,поїхали далі ")
-else:
-        input("Треба вводити чітко на англійській Чоловік або Жінка ")
-
-
-time.sleep(2)
-print("Вітаємо ваше початкове місцеположення " + player_location)
-
-
-time.sleep(2)
-
-print("Кінець наявної частини гри")
-
-
-
-
-
-
+player_surv_food: int = 100
+player_surv_water: int = 100
 
 
 

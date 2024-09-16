@@ -10,8 +10,9 @@ try:
     time.sleep(1)
     print(welcome_message01)
 
-    print(display)
+    #print(display)
 except KeyboardInterrupt:
     print("Програму перервано користувачем.")
 except ImportError as e:
     print(f"Помилка імпорту: {e}")
+
