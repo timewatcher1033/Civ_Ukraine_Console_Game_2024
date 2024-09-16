@@ -30,6 +30,10 @@ player_surv_food: int = 100
 player_surv_water: int = 100
 ###############################
 
+def main_game_loop(number):
+    if player_health <= 0:
+        print()
+
 
 
 
