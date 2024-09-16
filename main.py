@@ -69,6 +69,7 @@ def check_player_status():
         print("")
 
           
+#Тепер можна додати щось для нових inputi'в або умов
 
 while True:
     check_player_status()
