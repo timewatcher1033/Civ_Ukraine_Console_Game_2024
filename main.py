@@ -1,3 +1,5 @@
+import sys
+import os
 
 
 #Міста гри
@@ -35,22 +37,37 @@ player_surv_water: int = 100
 player_surv_food: int = 100
 player_surv_water: int = 100
 
+#функція підчищеня консолі, щоб новий вивід гри не змішувався з  старим
+def clear_console():
+    """Очищає консоль за допомогою команди ОС."""
+    command = 'clear'
+    if os.name in ('nt', 'dos'):  # Якщо ОС Windows
+        command = 'cls'
+    os.system(command)
+
 def check_player_status():
     if player_surv_food <= 0 or player_surv_water <= 0:
         print("Гравець помер , ви програли :(")
+        sys.exit()
     else:
+        clear_console()
+        print("")
         print("Ваше прізвище та ім'я: "+ player_name + " " + player_last_name)
         print("Рівень здоров'я: "+ str(player_health))
         print("Зневоднення: "+ str(player_surv_water))
         print("Голод: "+ str(player_surv_food))
         print("Ви у місті: "+ player_location)
-     
 
+        print("")
+    
         print("Ваші характеристики:")
         print("Сила: "+ str(player_strenght))
         print("Спритність: "+ str(player_agility))
         print("Інтелект: "+ str(player_intelligence))
         print("Витривалість: "+ str(player_stamina))
+
+        print("")
+
           
 
 while True:
