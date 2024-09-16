@@ -1,0 +1,15 @@
+/__pycache__/
+/txt/
+/img/
+
+
+
+
+
+
+*.session
+*.session-journal
+*.db
+
+/downloads/
+.idea
