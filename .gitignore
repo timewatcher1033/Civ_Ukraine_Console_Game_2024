@@ -5,7 +5,12 @@
 
 
 test.py
-
+clock.py
+player.py
+print.py
+input.py
+ui.py
+location.py
 
 
 

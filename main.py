@@ -1,6 +1,9 @@
 import sys
 import os
 
+#тестова змінна для ручного переміщення або прогресу по грі, увівши 0 гра закінчиться
+player_alfa_test_func_check = 100
+
 #Міста гри
 ukraine_city_1 = "Київ"
 ukraine_city_2 = "Дніпро"
@@ -14,10 +17,11 @@ europe_city_3 = "Берлін"
 #Змінна поточного місцеположення гравця
 player_location = ukraine_city_1
 
-#сюди зберігаються ім'я та призвище при старті гравця
-
+#сюди зберігаються стать, ім'я та призвище при старті гравця
+player_sex = input("Введіть будь ласка ти хлопчик чи дівчинка: ")
 player_name = input("Введи ім'я гравця ")
 player_last_name = input("Введи призвіще гравця ")
+
 
 #статки гравця
 player_health: int = 100
@@ -65,6 +69,7 @@ def check_player_status():
 
         print("")
 
+        print("Стать: "+ player_sex)
         print("Ваше прізвище та ім'я: "+ player_name + " " + player_last_name)
         print("Рівень здоров'я: "+ str(player_health))
         print("Зневоднення: "+ str(player_surv_water))
@@ -88,8 +93,9 @@ while True:
     check_player_status()
     
     # Оновлення значень змінних ,можна змінити на свої змінні , бо ці чисто для наглядності
+    player_alfa_test_func_check = int(input("Введіть нове значення щоб перейти далі... "))
     player_surv_food = int(input("Введіть нове значення харчів: "))
     player_surv_water = int(input("Введіть нове значення води: "))
 
-                                                    # END #
+                                                    # MAIN CODE END #
 

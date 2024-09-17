@@ -1,4 +1,3 @@
-import time
 
 #сюди зберігаються ім'я та призвище при старті гравця
 #перевірка його хіт поінтів
@@ -18,7 +17,7 @@ player_stamina= 1
 player_surv_food= 100
 player_surv_water= 100
 
-time.sleep(2)
+
 print("тут почалася перевірка чи живий гравець")
 
 def player_alive(player_health):
