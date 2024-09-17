@@ -30,14 +30,24 @@ player_stamina: int = 1
 
 player_surv_food: int = 100
 player_surv_water: int = 100
-###############################
-
-#тест від Gemini
 
 player_surv_food: int = 100
 player_surv_water: int = 100
+#Нова версія часу у грі
+def increment():
+  """Функція, яка збільшує внутрішнє число на 1 при кожному виклику.
+
+  Returns:
+    Нове значення числа після інкременту.
+  """
+  #count змінна днів або будьякого часу    
+  global day  # Оголошення глобальної змінної для зберігання лічильника
+  day += 1
+  return day
+
 
 #функція підчищеня консолі, щоб новий вивід гри не змішувався з  старим
+
 def clear_console():
     """Очищає консоль за допомогою команди ОС."""
     command = 'clear'
@@ -51,7 +61,9 @@ def check_player_status():
         sys.exit()
     else:
         clear_console()
+
         print("")
+
         print("Ваше прізвище та ім'я: "+ player_name + " " + player_last_name)
         print("Рівень здоров'я: "+ str(player_health))
         print("Зневоднення: "+ str(player_surv_water))
@@ -67,7 +79,7 @@ def check_player_status():
         print("Витривалість: "+ str(player_stamina))
 
         print("")
-
+        print("s"+ int(day))
           
 #Тепер можна додати щось для нових inputi'в або умов
 
