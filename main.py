@@ -1,7 +1,6 @@
 import sys
 import os
 
-
 #Міста гри
 ukraine_city_1 = "Київ"
 ukraine_city_2 = "Дніпро"
@@ -45,9 +44,10 @@ def increment():
   day += 1
   return day
 
+day = 0
+
 
 #функція підчищеня консолі, щоб новий вивід гри не змішувався з  старим
-
 def clear_console():
     """Очищає консоль за допомогою команди ОС."""
     command = 'clear'
@@ -55,6 +55,7 @@ def clear_console():
         command = 'cls'
     os.system(command)
 
+#Головна функція гри
 def check_player_status():
     if player_surv_food <= 0 or player_surv_water <= 0:
         print("Гравець помер , ви програли :(")
@@ -79,7 +80,7 @@ def check_player_status():
         print("Витривалість: "+ str(player_stamina))
 
         print("")
-        print("s"+ int(day))
+        print("День: "+ str(increment()))
           
 #Тепер можна додати щось для нових inputi'в або умов
 
